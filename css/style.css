@@ -1,1 +1,285 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/* Utils.(Variables.Fonctions.Mixins.Placeholders)
+Feuilles de style de tiers (vendors) (si vous en avez).
+Base.
+Composants.
+Layout.
+Pages.
+Thèmes.*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/* fonts */
+/*colors*/
+/* dark green text: #008766*/
+/* iconos grises: #7e7e7e */
+/* functions */
+/* Return pastel color from a given HEX value color*/
+/* mixins */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  padding: 1em;
+  z-index: 2;
+  /* to show de box shadow over the geolocalization div*/
+  position: relative;
+  /* To show de z-index position*/
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 2em;
+  background: #353535;
+  text-align: left;
+}
+
+footer img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 1em;
+  width: auto;
+}
+
+footer nav {
+  color: white;
+}
+
+footer nav ul {
+  padding: 0;
+}
+
+footer nav a {
+  color: white;
+  line-height: 1.8em;
+}
+
+footer nav i {
+  margin-right: 0.5em;
+  width: 1em;
+}
+
+.geo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  background: #EAEAEA;
+}
+
+.geo-form input {
+  padding: 1em;
+  border: none;
+  background: none;
+  font-weight: bold;
+  color: #575757;
+}
+
+.presentation-card {
+  text-align: center;
+  padding: 2em;
+  background: #f6f6f6;
+}
+
+.presentation-card h1 {
+  margin: 1em 1em 0em 1em;
+  font-weight: 900;
+}
+
+.presentation-card p {
+  color: #575757;
+}
+
+.presentation-card button {
+  padding: 1em;
+  border-radius: 2em;
+  background: linear-gradient(350deg, #9356DC, #FF79DA 90%);
+  color: white;
+  border: none;
+  margin: 1em;
+  -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.3);
+}
+
+.guide-card {
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.guide-card ul {
+  padding-left: 0;
+  margin: 2em auto;
+}
+
+.guide-card__instruction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1.5em auto;
+}
+
+.guide-card__instruction > span {
+  padding: 4px 8px;
+  background: #9356DC;
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: small;
+  color: white;
+  margin-right: -10px;
+  z-index: 2;
+}
+
+.guide-card__instruction div {
+  padding: 1em;
+  border-radius: 1.5em;
+  background: #f6f6f6;
+  -webkit-box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+          box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+  width: 95%;
+  font-weight: bold;
+}
+
+.guide-card__instruction div > * {
+  padding: 0.5em;
+}
+
+.guide-card__instruction div i {
+  color: #7e7e7e;
+}
+
+.guide-card__instruction.active div {
+  background-color: #f4ebff;
+}
+
+.guide-card__instruction.active div i {
+  color: #9356DC;
+}
+
+.restaurant-list {
+  background-color: #f6f6f6;
+  padding: 2em 1em 3em 1em;
+}
+
+.restaurant-card {
+  background: #fff;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+          box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+  margin: 1em auto;
+}
+
+.restaurant-card--new .restaurant-card__image::after {
+  content: "Nouveau";
+  background: #99E2D0;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  top: 1em;
+  right: 1em;
+  position: absolute;
+  color: #008766;
+  font-weight: bold;
+  font-size: small;
+}
+
+.restaurant-card--like {
+  font-weight: 400;
+  color: #7e7e7e;
+}
+
+.restaurant-card--like:hover {
+  background-image: linear-gradient(350deg, #9356DC, #FF79DA 90%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-weight: 900;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.restaurant-card__image {
+  position: relative;
+}
+
+.restaurant-card__image img {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurant-card__description {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurant-card__description i {
+  font-size: 1.5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.restaurant-card__description h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.restaurant-card__description p {
+  margin: 0.25em auto;
+}
+/*# sourceMappingURL=style.css.map */

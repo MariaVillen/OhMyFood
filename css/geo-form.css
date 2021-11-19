@@ -1,0 +1,24 @@
+.geo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 3px 4px 2px grey inset;
+          box-shadow: 0px 3px 4px 2px grey inset;
+  padding: 0.5em;
+}
+
+.geo-form input {
+  padding: 1em;
+  border: none;
+}
+/*# sourceMappingURL=geo-form.css.map */

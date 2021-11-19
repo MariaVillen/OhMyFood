@@ -1,6 +1,15 @@
-
-$font-title: "Shrikhand";
-$font-text: "Roboto";
-$primay-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+/* Utils.(Variables.Fonctions.Mixins.Placeholders)
+Feuilles de style de tiers (vendors) (si vous en avez).
+Base.
+Composants.
+Layout.
+Pages.
+Thèmes.*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import "./Utils/_variables";
+@import "./Utils/mixins-functions";
+@import "./Base/_base";
+@import "./Composants/_geo-form";
+@import "./Composants/_presentation-card";
+@import "./Composants/_instruction-guide";
+@import "./Composants/_resto-list";

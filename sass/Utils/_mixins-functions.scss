@@ -1,0 +1,29 @@
+/* functions */
+
+/* Return pastel color from a given HEX value color*/
+@function pastel($clr)
+{
+    $hue: hue($clr);
+    $sat: 100%;
+    $light: 96%;
+    $pastel: hsl($hue, $sat, $light);
+    @return $pastel;
+}
+
+/* mixins */
+
+@mixin side-border-radius($side, $msr) {
+    @if($side == "right") {
+        border-top-right-radius: $msr;
+        border-bottom-right-radius: $msr;        
+    } @else if($side == "bottom") {
+        border-bottom-right-radius: $msr;
+        border-bottom-left-radius: $msr;
+    } @else if($side == "left"){
+        border-top-left-radius: $msr;
+        border-bottom-left-radius: $msr;
+    } @else {
+        border-top-left-radius: $msr;
+        border-top-right-radius: $msr;
+    }
+}

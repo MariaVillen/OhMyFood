@@ -1,0 +1,75 @@
+
+.restaurant-list {
+    background-color: $background-light;
+    padding: 2em 1em 3em 1em;
+}
+
+.restaurant-card {
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+    margin: 1em auto;
+
+    &--new .restaurant-card__image::after{
+        content:"Nouveau";
+        background: $tertiary-color;
+        border-radius: 0.2em;
+        padding: 0.5em;
+        top: 1em;
+        right: 1em;
+        position: absolute;
+        color: scale-color($color: $tertiary-color, $saturation: 100%, $lightness: -64.4%);
+        font-weight: bold;
+        font-size: small;
+    }
+
+    &--like {
+       font-weight: 400;
+       color:rgb(126, 126, 126);
+      
+    }
+    &--like:hover {
+        background-image: linear-gradient(350deg, $primary-color, $secondary-color 90%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        text-fill-color: transparent;
+        font-weight: 900;
+        transition: all 400ms ease-in-out;
+    }
+
+    &__image {
+        position: relative;
+
+            img {
+                @include side-border-radius("top", 1em);
+                height: 200px;
+                object-fit: cover;
+            }
+    }
+
+    &__description {
+
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        
+        i {
+            font-size: 1.5em;
+            align-self: center;
+        }
+        
+        h2 {
+            margin:0;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin: 0.25em auto;
+        }
+    }
+
+}
