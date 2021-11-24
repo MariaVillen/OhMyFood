@@ -1,3 +1,11 @@
+/* Set a height for the restaurants page image on header */
+/* Add the return icon to the header of the restaurants pages */
+/* Make display the item green button when the li is hover and not only de price*/
+/* Make a function to add 3 or 4 loops according to the page - animation introfade */
+/* Add the 3 seconds waiting intro */
+/* Add sizes and srcset attributes on images in html" */
+/* Add the differents @media */
+
 * {
     box-sizing: border-box;
 }
@@ -17,6 +25,7 @@ img {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 a:active {
     color: inherit;

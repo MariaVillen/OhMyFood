@@ -14,6 +14,38 @@ Thèmes.*/
 /* functions */
 /* Return pastel color from a given HEX value color*/
 /* mixins */
+@-webkit-keyframes introfade {
+  0% {
+    opacity: 0;
+    -webkit-transition: translateY(2em);
+    transition: translateY(2em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes introfade {
+  0% {
+    opacity: 0;
+    -webkit-transition: translateY(2em);
+    transition: translateY(2em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* Set a height for the restaurants page image on header */
+/* Add the return icon to the header of the restaurants pages */
+/* Make display the item green button when the li is hover and not only de price*/
+/* Make a function to add 3 or 4 loops according to the page - animation introfade */
+/* Add the 3 seconds waiting intro */
+/* Add sizes and srcset attributes on images in html" */
+/* Add the differents @media */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -34,6 +66,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:active {
@@ -52,14 +85,18 @@ li {
   color: white;
   border: none;
   margin: 1em;
-  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .active-button:hover {
-  background: linear-gradient(350deg, #9b63df, #ff88de 90%);
-  -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.6);
+  /*background: linear-gradient(350deg, lighten($primary-color, 3%), lighten($secondary-color, 3%) 90%);*/
+  -webkit-box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 /* icon fill gradient */
@@ -86,7 +123,7 @@ label.like-fill-icon > i::after {
   position: absolute;
   right: 0;
   top: 0px;
-  background-image: linear-gradient(350deg, #9356DC, #FF79DA 90%);
+  background-image: linear-gradient(330deg, #9356DC, #FF79DA 75%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -207,7 +244,8 @@ footer nav i {
 
 .menu {
   padding: 1em;
-  border-radius: 3em;
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
   background: #f6f6f6;
   position: relative;
   top: -3em;
@@ -247,6 +285,9 @@ footer nav i {
 
 .menu__body-section {
   margin-bottom: 3em;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  opacity: 0;
 }
 
 .menu__body-section ul {
@@ -353,11 +394,11 @@ footer nav i {
   color: #7e7e7e;
 }
 
-.guide-card__instruction.active div {
+.guide-card__instruction:hover div {
   background-color: #f4ebff;
 }
 
-.guide-card__instruction.active div i {
+.guide-card__instruction:hover div i {
   color: #9356DC;
 }
 
@@ -416,7 +457,7 @@ footer nav i {
       align-self: center;
 }
 
-.restaurant-card__description h2 {
+.restaurant-card__description h3 {
   margin: 0;
   font-size: 1.2em;
 }
@@ -444,6 +485,8 @@ footer nav i {
   margin: 1em auto;
   background: white;
   margin-top: 1.5em;
+  -webkit-transform: translateY(4em);
+          transform: translateY(4em);
 }
 
 .menu-item__titre {
@@ -517,5 +560,35 @@ footer nav i {
 
 .menu-item__button:hover div {
   max-width: 150px;
+}
+
+.menu__body-section:nth-child(1) {
+  -webkit-animation: introfade 700ms ease-out forwards;
+          animation: introfade 700ms ease-out forwards;
+}
+
+.menu-item:nth-child(1) {
+  -webkit-animation: introfade 700ms ease-out forwards;
+          animation: introfade 700ms ease-out forwards;
+}
+
+.menu__body-section:nth-child(2) {
+  -webkit-animation: introfade 1000ms ease-out forwards;
+          animation: introfade 1000ms ease-out forwards;
+}
+
+.menu-item:nth-child(2) {
+  -webkit-animation: introfade 1000ms ease-out forwards;
+          animation: introfade 1000ms ease-out forwards;
+}
+
+.menu__body-section:nth-child(3) {
+  -webkit-animation: introfade 1300ms ease-out forwards;
+          animation: introfade 1300ms ease-out forwards;
+}
+
+.menu-item:nth-child(3) {
+  -webkit-animation: introfade 1300ms ease-out forwards;
+          animation: introfade 1300ms ease-out forwards;
 }
 /*# sourceMappingURL=style.css.map */

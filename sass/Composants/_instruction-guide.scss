@@ -40,7 +40,7 @@
                 }
        }
 
-       &__instruction.active {
+       &__instruction:hover {
            
             div { 
             background-color: pastel($primary-color);
