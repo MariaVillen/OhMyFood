@@ -13,5 +13,10 @@
             background: none;
             font-weight: bold;
             color: $font-secondary;
+            border: 2px solid transparent;
+        }
+        input:focus-visible, input:focus {
+            border-bottom: 2px solid $tertiary-color;
+            outline: none;
         }
 }

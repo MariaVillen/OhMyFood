@@ -1,0 +1,131 @@
+
+/*   General Container Layout */
+.container {
+    background: $background-light;
+}
+
+
+/* Header */
+
+header {
+    padding: 1em;
+    z-index: 2; /* to show de box shadow over the geolocalization div*/
+    position: relative; /* To show de z-index position*/
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+
+        .logo {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                object-fit: contain;
+                 max-width: 180px;
+             }
+        }
+        
+}
+
+/* footer */
+
+footer {
+    padding: 2em;
+    background: $background-black;
+    text-align: left;
+
+        a:hover {
+            color: $tertiary-color;
+        }
+
+        img {
+            filter: invert(1);
+            height: 1em;
+            width: auto;
+        }
+
+        nav {
+            color: white;
+
+            ul { padding: 0; }
+            a {
+                color: white;
+                line-height: 1.8em;
+            }
+            i {
+                margin-right: 0.5em;
+                width: 1em;
+            }
+        }
+}
+
+.presentation-card {
+    text-align: center;
+    padding: 2em;
+    background: $background-light;
+
+        h1 {
+            margin: 1em 1em 0em 1em;
+            font-weight: 900;
+        }
+
+        p {
+            color: $font-secondary;
+        }
+}
+
+.menu {
+    padding: 1em;
+    border-radius: 3em;
+    background: $background-light;
+    position:relative;
+    top: -3em;
+
+        .active-button {
+            margin: 0 auto;
+            display: block;
+            padding: 1em 3em;
+        }
+
+        &__title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1em;
+
+            h1 {
+                font-family: $font-title;
+            }
+            label {
+                margin: auto 1.5em;
+                font-size: 1.5em;
+            }
+        }
+
+        &__body-section {
+            margin-bottom: 3em;
+            ul {
+                padding: 0;
+            }
+            h2 {
+                font-weight: 100;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                margin: 1em auto;
+                position: relative;
+            }
+            h2::after {
+                content: "";
+                position: absolute;
+                border-bottom: 3px solid #99E2D0;
+                padding-right: 2.5em;
+                top: 1.4em;
+                left: 0;
+            }
+        }
+
+}

@@ -6,10 +6,12 @@ Layout.
 Pages.
 Thèmes.*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-@import "./Utils/_variables";
+@import "./Utils/variables";
 @import "./Utils/mixins-functions";
-@import "./Base/_base";
-@import "./Composants/_geo-form";
-@import "./Composants/_presentation-card";
-@import "./Composants/_instruction-guide";
-@import "./Composants/_resto-list";
+@import "./Base/base";
+@import "./Composants/little-components";
+@import "./layouts/layouts";
+@import "./Composants/geo-form";
+@import "./Composants/instruction-guide";
+@import "./Composants/resto-list";
+@import "./Composants/menu-item";

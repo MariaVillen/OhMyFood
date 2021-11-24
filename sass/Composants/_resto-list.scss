@@ -23,24 +23,7 @@
         font-size: small;
     }
 
-    &--like {
-       font-weight: 400;
-       color:rgb(126, 126, 126);
-      
-    }
-    &--like:hover {
-        background-image: linear-gradient(350deg, $primary-color, $secondary-color 90%);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-text-fill-color: transparent;
-        text-fill-color: transparent;
-        font-weight: 900;
-        transition: all 400ms ease-in-out;
-    }
-
+    
     &__image {
         position: relative;
 
@@ -73,3 +56,4 @@
     }
 
 }
+
