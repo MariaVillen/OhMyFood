@@ -14,6 +14,7 @@ header {
      @include box--shadow("header");
     display: flex;
     justify-content: center;
+    align-items: center;
 
         .logo {
             width: 50%;
@@ -21,6 +22,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-grow: 1;
             
             img {
                 object-fit: contain;
@@ -28,6 +30,40 @@ header {
              }
         }
         
+}
+
+header.spinner {
+    animation: fullScreen 4s ease-out;
+
+        .logo div {
+            position: relative;
+        }
+        .logo div::before {
+            content:"";
+            position: absolute;
+            top: -300%;
+            bottom: -300%;
+            left: -20%;
+            right: -20%;
+            border: 7px solid transparent;
+            border-top-color: $primary-color;
+            border-radius: 50%; 
+            opacity:0;
+            animation: rotateSpinner1 3500ms linear;
+        }
+        .logo div::after {
+            content:"";
+            position: absolute;
+            top: -270%;
+            bottom: -270%;
+            left: -14%;
+            right: -14%;
+            border: 7px solid transparent;
+            border-top-color: $secondary-color;
+            border-radius: 50%; 
+            opacity: 0;
+            animation: rotateSpinner2 3500ms linear;
+        }
 }
 
 /* footer */
@@ -77,6 +113,9 @@ footer {
         }
 }
 
+.thumbnail img {
+    max-height: 265px;
+}
 .menu {
     padding: 1em;
     @include side-border-radius("top", 3em);
@@ -131,4 +170,15 @@ footer {
             }
         }
 
+}
+
+
+
+@for $index from 1 through 4 {
+    .menu__body-section:nth-child(#{$index}) {
+        animation: introfade #{$index * 300 + 400}ms ease-out forwards;
+    }
+    .menu-item:nth-child(#{$index}) {
+        animation: introfade #{$index * 300 + 400}ms ease-out forwards;
+    }
 }

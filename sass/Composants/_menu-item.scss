@@ -51,8 +51,8 @@
                     padding: 0 1em;
                 }
             }
-
-            &:hover {
+        }
+        &:hover .menu-item__button {
                 i { 
                     transform: rotate(1turn);
                     transition: transform 400ms ease-in-out;
@@ -60,16 +60,6 @@
                 div {
                     max-width: 150px;
                 }
-            }
         }
 
     }
-
-@for $index from 1 through 3 {
-    .menu__body-section:nth-child(#{$index}) {
-        animation: introfade #{$index * 300 + 400}ms ease-out forwards;
-    }
-    .menu-item:nth-child(#{$index}) {
-        animation: introfade #{$index * 300 + 400}ms ease-out forwards;
-    }
-}
