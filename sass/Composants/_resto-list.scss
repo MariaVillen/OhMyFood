@@ -7,7 +7,6 @@
         flex-flow: row wrap;
         justify-content: space-evenly;
     }
-
     h2 {
         @include mq(medium) {
             width: 100%;
@@ -23,7 +22,6 @@
     @include mq(medium) {
         width: 45%;
     }
-
     &--new .restaurant-card__image::after{
         content:"Nouveau";
         background: $tertiary-color;
@@ -36,8 +34,6 @@
         font-weight: bold;
         font-size: small;
     }
-
-    
     &__image {
         position: relative;
 
@@ -47,27 +43,21 @@
                 object-fit: cover;
             }
     }
-
     &__description {
-
         padding: 1em;
         display: flex;
         justify-content: space-between;
-        
         i {
             font-size: 1.5em;
             align-self: center;
         }
-        
         h3 {
             margin:0;
             font-size: 1.2em;
         }
-        
         p {
             margin: 0.25em auto;
         }
     }
-
 }
 

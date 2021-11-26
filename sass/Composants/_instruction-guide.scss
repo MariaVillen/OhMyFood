@@ -5,7 +5,6 @@
     @include mq(medium) {
         margin: auto;
     }
-
         ul {
             padding-left: 0;
             margin: 2em auto;
@@ -20,12 +19,10 @@
                 }
             }
         }
-
         &__instruction {
             display: flex;
             justify-content: center;
             margin: 1.5em auto;
-
                 > span {
                     padding: 4px 8px;
                     background: $primary-color;
@@ -36,7 +33,6 @@
                     margin-right: -10px;
                     z-index: 2;
                 }
-          
                 div {
                     padding: 1em;
                     border-radius: 1.5em;
@@ -57,7 +53,6 @@
                     color:rgb(126, 126, 126);
                 }
        }
-
        &__instruction:hover {
            
             div { 

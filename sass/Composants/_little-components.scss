@@ -1,4 +1,5 @@
 /* button gradient and lighten hover */
+
 .active-button {
     padding: 1em;
     border-radius: 2em;
@@ -11,12 +12,10 @@
 
 
         &:hover {
-            /*background: linear-gradient(350deg, lighten($primary-color, 3%), lighten($secondary-color, 3%) 90%);*/
             @include box--shadow("dark");
             filter: brightness(1.1);    
         }
 }
-
 
 /* icon fill gradient */
 label.like-fill-icon {
@@ -49,7 +48,6 @@ label.like-fill-icon {
         transition: transform 300ms ease-in;
     }
 }
-
 input.like-fill-icon:checked + label.like-fill-icon {
     & > i {
     color: $secondary-color;

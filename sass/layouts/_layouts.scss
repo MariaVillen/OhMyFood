@@ -1,34 +1,32 @@
 
 /*   General Container Layout */
 .container{
-
     background-color: $background-light;
+
     &.home {
     background: $background-light;
     @include mq(large){
-        background-color: $tertiary-color;
+            background-color: $tertiary-color;
     }
-    section {
-        @include mq(large){
-            max-width: 990px;
-            margin: auto;
-        }
+        section {
+            @include mq(large){
+                max-width: 990px;
+                margin: auto;
+            }
+        }  
     }
-    
 }
-}
-/* Header */
 
+
+/* Header */
 header {
     padding: 1em;
-    z-index: 2; /* to show de box shadow over the geolocalization div*/
-    position: relative; /* To show de z-index position*/
-     @include box--shadow("header");
+    position: relative; /* To show the boxshadow*/
+    @include box--shadow("header");
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-
         .logo {
             width: 50%;
             height: 100%;
@@ -36,46 +34,41 @@ header {
             justify-content: center;
             align-items: center;
             flex-grow: 1;
-            
             img {
                 object-fit: contain;
                  max-width: 180px;
              }
         }
-        
 }
 
 header.spinner {
-    animation: fullScreen 4s ease-out;
-
+    animation: fullScreen 4s linear;
         .logo div {
             position: relative;
         }
-        .logo div::before {
+        .logo div::before,
+        .logo div::after {
             content:"";
             position: absolute;
+            border: 7px solid transparent;
+            border-radius: 50%; 
+            opacity:0;
+            }
+        .logo div::before {
             top: -300%;
             bottom: -300%;
             left: -20%;
             right: -20%;
-            border: 7px solid transparent;
             border-top-color: $primary-color;
-            border-radius: 50%; 
-            opacity:0;
-            animation: rotateSpinner1 3500ms linear;
+            animation: rotateSpinner1 3500ms linear forwards;
         }
         .logo div::after {
-            content:"";
-            position: absolute;
             top: -270%;
             bottom: -270%;
             left: -14%;
-            right: -14%;
-            border: 7px solid transparent;
+            right: -14%;   
             border-top-color: $secondary-color;
-            border-radius: 50%; 
-            opacity: 0;
-            animation: rotateSpinner2 3500ms linear;
+            animation: rotateSpinner2 3500ms linear forwards;
         }
 }
 
@@ -85,20 +78,16 @@ footer {
     padding: 2em;
     background: $background-black;
     text-align: left;
-
         a:hover {
             color: $tertiary-color;
         }
-
         img {
             filter: invert(1);
             height: 1em;
             width: auto;
         }
-
         nav {
             color: white;
-
             ul { padding: 0;
                 @include mq(medium){
                     display: flex;
@@ -116,37 +105,38 @@ footer {
         }
 }
 
+/* Active button Layout */
 .presentation-card {
     text-align: center;
     padding: 2em;
     background: $background-light;
-
         h1 {
             margin: 1em 1em 0em 1em;
             font-weight: 900;
         }
-
         p {
             color: $font-secondary;
         }
 }
 
+/* Images on restaurants menus */
+
 .thumbnail img {
     max-height: 265px;
 }
+
+/* Restaurants menu layout */
 .menu {
     padding: 1em;
     @include side-border-radius("top", 3em);
     background: $background-light;
     position:relative;
     top: -3em;
-
         .active-button {
             margin: 0 auto;
             display: block;
             padding: 1em 3em;
         }
-
         &__title {
             display: flex;
             flex-flow: row nowrap;
@@ -156,7 +146,6 @@ footer {
             @include mq(large) {
                 justify-content: center;
             }
-
             h1 {
                 font-family: $font-title;
             }
@@ -165,14 +154,12 @@ footer {
                 font-size: 1.5em;
             }
         }
-
         &__body {
             @include mq(large){
                 display: flex;
                 justify-content: space-evenly;
             }
         }
-
         &__body-section {
             margin-bottom: 3em;
             transform: translateY(2em);
@@ -186,7 +173,6 @@ footer {
                 margin: 1em;
                 width: 100%;
             }
-            
             ul {
                 padding: 0;
             }
@@ -206,10 +192,10 @@ footer {
                 left: 0;
             }
         }
-
 }
 
 
+/* Automatization of Css from menu restaurant layout */
 
 @for $index from 1 through 4 {
     .menu__body-section:nth-child(#{$index}) {

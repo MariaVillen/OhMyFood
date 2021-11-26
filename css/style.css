@@ -9,13 +9,14 @@ Thèmes.*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* fonts */
 /*colors*/
-/* dark green text: #008766*/
-/* iconos grises: #7e7e7e */
 /* Breakpoints */
-/* functions */
+/***** FUNCTIONS ******/
 /* Return pastel color from a given HEX value color*/
-/* mixins */
-/*keyframes*/
+/***** MIXINS *******/
+/* To give border-radius the 2 corners on 1 side */
+/* box shadow styles */
+/* Break Points - The $breakpoints must be declared */
+/********* ANIMATIONS - KEYFRAMES ********/
 @-webkit-keyframes introfade {
   0% {
     opacity: 0;
@@ -52,11 +53,16 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-  }
-  100% {
     -webkit-transform: rotate(4turn);
             transform: rotate(4turn);
-    opacity: 0;
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -71,11 +77,16 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-  }
-  100% {
     -webkit-transform: rotate(4turn);
             transform: rotate(4turn);
-    opacity: 0;
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -90,11 +101,16 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-  }
-  100% {
     -webkit-transform: rotate(6turn);
             transform: rotate(6turn);
-    opacity: 0;
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -109,11 +125,16 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-  }
-  100% {
     -webkit-transform: rotate(6turn);
             transform: rotate(6turn);
-    opacity: 0;
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -157,9 +178,6 @@ Thèmes.*/
   }
 }
 
-/* Make a function to add 3 or 4 loops according to the page - animation introfade */
-/* Add sizes and srcset attributes on images in html" */
-/* Add the differents @media */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -217,7 +235,6 @@ li {
 }
 
 .active-button:hover {
-  /*background: linear-gradient(350deg, lighten($primary-color, 3%), lighten($secondary-color, 3%) 90%);*/
   -webkit-box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
   -webkit-filter: brightness(1.1);
@@ -299,10 +316,8 @@ input.like-fill-icon:checked + label.like-fill-icon > i::after {
 /* Header */
 header {
   padding: 1em;
-  z-index: 2;
-  /* to show de box shadow over the geolocalization div*/
   position: relative;
-  /* To show de z-index position*/
+  /* To show the boxshadow*/
   -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
@@ -341,42 +356,41 @@ header .logo img {
 }
 
 header.spinner {
-  -webkit-animation: fullScreen 4s ease-out;
-          animation: fullScreen 4s ease-out;
+  -webkit-animation: fullScreen 4s linear;
+          animation: fullScreen 4s linear;
 }
 
 header.spinner .logo div {
   position: relative;
 }
 
-header.spinner .logo div::before {
+header.spinner .logo div::before,
+header.spinner .logo div::after {
   content: "";
   position: absolute;
+  border: 7px solid transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+header.spinner .logo div::before {
   top: -300%;
   bottom: -300%;
   left: -20%;
   right: -20%;
-  border: 7px solid transparent;
   border-top-color: #9356DC;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-animation: rotateSpinner1 3500ms linear;
-          animation: rotateSpinner1 3500ms linear;
+  -webkit-animation: rotateSpinner1 3500ms linear forwards;
+          animation: rotateSpinner1 3500ms linear forwards;
 }
 
 header.spinner .logo div::after {
-  content: "";
-  position: absolute;
   top: -270%;
   bottom: -270%;
   left: -14%;
   right: -14%;
-  border: 7px solid transparent;
   border-top-color: #FF79DA;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-animation: rotateSpinner2 3500ms linear;
-          animation: rotateSpinner2 3500ms linear;
+  -webkit-animation: rotateSpinner2 3500ms linear forwards;
+          animation: rotateSpinner2 3500ms linear forwards;
 }
 
 /* footer */
@@ -426,6 +440,7 @@ footer nav i {
   width: 1em;
 }
 
+/* Active button Layout */
 .presentation-card {
   text-align: center;
   padding: 2em;
@@ -441,10 +456,12 @@ footer nav i {
   color: #575757;
 }
 
+/* Images on restaurants menus */
 .thumbnail img {
   max-height: 265px;
 }
 
+/* Restaurants menu layout */
 .menu {
   padding: 1em;
   border-top-left-radius: 3em;
@@ -548,6 +565,7 @@ footer nav i {
   left: 0;
 }
 
+/* Automatization of Css from menu restaurant layout */
 .menu__body-section:nth-child(1) {
   -webkit-animation: introfade 700ms ease-out forwards;
           animation: introfade 700ms ease-out forwards;
@@ -613,9 +631,10 @@ footer nav i {
   font-weight: bold;
   color: #575757;
   border: 2px solid transparent;
+  z-index: 999;
 }
 
-.geo-form input:focus-visible, .geo-form input:focus {
+.geo-form input:focus-visible, .geo-form input:focus, .geo-form input:hover {
   border-bottom: 2px solid #99E2D0;
   outline: none;
 }

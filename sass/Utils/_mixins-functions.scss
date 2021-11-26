@@ -1,4 +1,4 @@
-/* functions */
+/***** FUNCTIONS ******/
 
 /* Return pastel color from a given HEX value color*/
 @function pastel($clr)
@@ -10,8 +10,9 @@
     @return $pastel;
 }
 
-/* mixins */
+/***** MIXINS *******/
 
+/* To give border-radius the 2 corners on 1 side */
 @mixin side-border-radius($side, $msr) {
     @if($side == "right") {
         border-top-right-radius: $msr;
@@ -28,6 +29,7 @@
     }
 }
 
+/* box shadow styles */
 @mixin box--shadow($style) {
     @if ($style=="light") {
     box-shadow: 3px 6px 8px 0px rgba(0, 0, 0,0.15);
@@ -40,17 +42,18 @@
     }
 }
 
+/* Break Points - The $breakpoints must be declared */
+
 @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
     @if map-has-key($mq-breakpoints, $mq-breakpoint) {
       $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
     }
-    
     @media screen and (min-width: #{$mq-breakpoint}) {
       @content;
     }
   }
   
-/*keyframes*/
+/********* ANIMATIONS - KEYFRAMES ********/
 
 @keyframes introfade {
     0% {
@@ -67,17 +70,21 @@
     0% {transform: rotate(0deg);
         opacity:1;}
     70%{opacity:1;}
-    80% {opacity:0;}
-    100% {transform: rotate(4turn);
-        opacity:0;}
+    80% {opacity:0;
+        transform: rotate(4turn);}
+    81% {transform: scale(0);}
+    100% {transform: scale(0);}
 }
+
 @keyframes rotateSpinner2 {
     0% {transform: rotate(0deg);
         opacity:1;}
     70%{opacity:1;}
-    80% {opacity:0;}
-    100% {transform: rotate(6turn);
-        opacity:0;}
+    80% {opacity:0;
+        transform: rotate(6turn);}
+    81% {transform: scale(0);}
+    100% {transform: scale(0);}
+
 }
 
 @keyframes noScroll {
@@ -90,11 +97,11 @@
         overflow: auto;
     }
 }
+
 @keyframes fullScreen {
     0%, 80% {
         min-height: 100vh;
     }
-    
     100% {
         min-height: 0vh;
     }
