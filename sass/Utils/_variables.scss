@@ -18,5 +18,10 @@ $background-light: #f6f6f6;
 $background-dark: #EAEAEA;
 $background-black: #353535;
 
-
+/* Breakpoints */
+$breakpoints: (
+  small : 480px,
+  medium: 768px,
+  large : 1024px
+);
 

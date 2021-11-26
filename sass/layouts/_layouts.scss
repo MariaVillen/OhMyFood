@@ -1,10 +1,22 @@
 
 /*   General Container Layout */
-.container {
+.container{
+
+    background-color: $background-light;
+    &.home {
     background: $background-light;
+    @include mq(large){
+        background-color: $tertiary-color;
+    }
+    section {
+        @include mq(large){
+            max-width: 990px;
+            margin: auto;
+        }
+    }
+    
 }
-
-
+}
 /* Header */
 
 header {
@@ -15,6 +27,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 
         .logo {
             width: 50%;
@@ -86,7 +99,12 @@ footer {
         nav {
             color: white;
 
-            ul { padding: 0; }
+            ul { padding: 0;
+                @include mq(medium){
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
             a {
                 color: white;
                 line-height: 1.8em;
@@ -135,6 +153,9 @@ footer {
             align-items: center;
             justify-content: space-between;
             margin-top: 1em;
+            @include mq(large) {
+                justify-content: center;
+            }
 
             h1 {
                 font-family: $font-title;
@@ -145,10 +166,26 @@ footer {
             }
         }
 
+        &__body {
+            @include mq(large){
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
         &__body-section {
             margin-bottom: 3em;
             transform: translateY(2em);
             opacity: 0;
+            width: 100%;
+            @include mq(medium){
+                margin: 0 auto;
+                width: 80%;
+            }
+            @include mq(large){
+                margin: 1em;
+                width: 100%;
+            }
             
             ul {
                 padding: 0;

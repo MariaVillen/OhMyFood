@@ -11,6 +11,7 @@ Thèmes.*/
 /*colors*/
 /* dark green text: #008766*/
 /* iconos grises: #7e7e7e */
+/* Breakpoints */
 /* functions */
 /* Return pastel color from a given HEX value color*/
 /* mixins */
@@ -184,6 +185,8 @@ img {
   height: 100%;
   width: 100%;
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 a {
@@ -273,7 +276,24 @@ input.like-fill-icon:checked + label.like-fill-icon > i::after {
 
 /*   General Container Layout */
 .container {
+  background-color: #f6f6f6;
+}
+
+.container.home {
   background: #f6f6f6;
+}
+
+@media screen and (min-width: 1024px) {
+  .container.home {
+    background-color: #99E2D0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container.home section {
+    max-width: 990px;
+    margin: auto;
+  }
 }
 
 /* Header */
@@ -294,6 +314,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
 }
 
 header .logo {
@@ -384,6 +405,17 @@ footer nav ul {
   padding: 0;
 }
 
+@media screen and (min-width: 768px) {
+  footer nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 footer nav a {
   color: white;
   line-height: 1.8em;
@@ -445,6 +477,14 @@ footer nav i {
   margin-top: 1em;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .menu__title h1 {
   font-family: "Shrikhand";
 }
@@ -454,11 +494,37 @@ footer nav i {
   font-size: 1.5em;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .menu__body-section {
   margin-bottom: 3em;
   -webkit-transform: translateY(2em);
           transform: translateY(2em);
   opacity: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__body-section {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__body-section {
+    margin: 1em;
+    width: 100%;
+  }
 }
 
 .menu__body-section ul {
@@ -557,11 +623,36 @@ footer nav i {
 .guide-card {
   padding: 1em;
   margin: 1em auto;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .guide-card {
+    margin: auto;
+  }
 }
 
 .guide-card ul {
   padding-left: 0;
   margin: 2em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .guide-card ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .guide-card ul li {
+    margin: 1em;
+  }
 }
 
 .guide-card__instruction {
@@ -597,6 +688,18 @@ footer nav i {
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+  .guide-card__instruction div {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .guide-card__instruction div > * {
   padding: 0.5em;
 }
@@ -618,12 +721,39 @@ footer nav i {
   padding: 2em 1em 3em 1em;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurant-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-list h2 {
+    width: 100%;
+  }
+}
+
 .restaurant-card {
   background: #fff;
   border-radius: 1em;
   -webkit-box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
           box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
   margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-card {
+    width: 45%;
+  }
 }
 
 .restaurant-card--new .restaurant-card__image::after {
