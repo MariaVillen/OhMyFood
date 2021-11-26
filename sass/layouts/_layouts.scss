@@ -42,7 +42,18 @@ header {
 }
 
 header.spinner {
-    animation: fullScreen 4s linear;
+    display: flex;
+    padding: 1.5em;
+        .logo {
+            background:white;
+            position: absolute;
+            width: 100%;
+            top:0;
+            left:0;
+            height: 100%;
+            z-index: 3;
+            animation: fullScreen 4s linear;
+        }
         .logo div {
             position: relative;
         }

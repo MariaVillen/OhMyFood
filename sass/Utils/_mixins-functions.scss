@@ -101,8 +101,11 @@
 @keyframes fullScreen {
     0%, 80% {
         min-height: 100vh;
+        position:fixed;
     }
+    81% {position: absolute;}
     100% {
-        min-height: 0vh;
+        position: absolute;
+        min-height: 0px;
     }
 }
