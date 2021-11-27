@@ -127,10 +127,12 @@ Thèmes.*/
             transform: rotate(3.5turn);
   }
   81% {
-    /*transform: scale(0);*/
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    /*transform: scale(0);*/
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -149,10 +151,12 @@ Thèmes.*/
             transform: rotate(3.5turn);
   }
   81% {
-    /*transform: scale(0);*/
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    /*transform: scale(0);*/
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
