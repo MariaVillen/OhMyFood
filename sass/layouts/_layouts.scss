@@ -96,6 +96,13 @@ footer {
     padding: 2em;
     background: $background-black;
     text-align: left;
+    
+        .footer-container {
+            @include mq(large){
+                max-width: 990px;
+                margin: auto;
+            }
+        }
         a:hover {
             color: $tertiary-color;
         }

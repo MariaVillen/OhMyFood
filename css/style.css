@@ -426,6 +426,13 @@ footer {
   text-align: left;
 }
 
+@media screen and (min-width: 1024px) {
+  footer .footer-container {
+    max-width: 990px;
+    margin: auto;
+  }
+}
+
 footer a:hover {
   color: #99E2D0;
 }
