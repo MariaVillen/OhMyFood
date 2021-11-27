@@ -66,12 +66,17 @@
     }
 }
 
+@keyframes image-grow {
+    0%, 81%{transform: scale(0.5);}
+    100%{transform: scale(1)}
+}
+
 @keyframes rotateSpinner1 {
     0% {transform: rotate(0deg);
         opacity:1;}
     70%{opacity:1;}
     80% {opacity:0;
-        transform: rotate(4turn);}
+        transform: rotate(1.5turn);}
     81% {transform: scale(0);}
     100% {transform: scale(0);}
 }
@@ -81,21 +86,10 @@
         opacity:1;}
     70%{opacity:1;}
     80% {opacity:0;
-        transform: rotate(6turn);}
+        transform: rotate(2.5turn);}
     81% {transform: scale(0);}
     100% {transform: scale(0);}
 
-}
-
-@keyframes noScroll {
-    0%,99% {
-       height: 100%;
-       overflow: hidden;
-    }
-    100%{
-        height: auto;
-        overflow: auto;
-    }
 }
 
 @keyframes fullScreen {

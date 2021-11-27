@@ -42,6 +42,28 @@ Thèmes.*/
   }
 }
 
+@-webkit-keyframes image-grow {
+  0%, 81% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes image-grow {
+  0%, 81% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @-webkit-keyframes rotateSpinner1 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -53,8 +75,8 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(4turn);
-            transform: rotate(4turn);
+    -webkit-transform: rotate(1.5turn);
+            transform: rotate(1.5turn);
   }
   81% {
     -webkit-transform: scale(0);
@@ -77,8 +99,8 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(4turn);
-            transform: rotate(4turn);
+    -webkit-transform: rotate(1.5turn);
+            transform: rotate(1.5turn);
   }
   81% {
     -webkit-transform: scale(0);
@@ -101,8 +123,8 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(6turn);
-            transform: rotate(6turn);
+    -webkit-transform: rotate(2.5turn);
+            transform: rotate(2.5turn);
   }
   81% {
     -webkit-transform: scale(0);
@@ -125,8 +147,8 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(6turn);
-            transform: rotate(6turn);
+    -webkit-transform: rotate(2.5turn);
+            transform: rotate(2.5turn);
   }
   81% {
     -webkit-transform: scale(0);
@@ -135,28 +157,6 @@ Thèmes.*/
   100% {
     -webkit-transform: scale(0);
             transform: scale(0);
-  }
-}
-
-@-webkit-keyframes noScroll {
-  0%, 99% {
-    height: 100%;
-    overflow: hidden;
-  }
-  100% {
-    height: auto;
-    overflow: auto;
-  }
-}
-
-@keyframes noScroll {
-  0%, 99% {
-    height: 100%;
-    overflow: hidden;
-  }
-  100% {
-    height: auto;
-    overflow: auto;
   }
 }
 
@@ -202,10 +202,6 @@ body {
   padding: 0;
   font-size: 16px;
   font-family: "Roboto";
-}
-
-body.animated {
-  /*animation: noScroll 4s ease-in-out;*/
 }
 
 img {
@@ -311,6 +307,8 @@ input.like-fill-icon:checked + label.like-fill-icon > i::after {
 @media screen and (min-width: 1024px) {
   .container.home {
     background-color: #99E2D0;
+    background: url(../images/general/backgroundBlur.jpg) no-repeat;
+    background-size: cover;
   }
 }
 
@@ -360,7 +358,8 @@ header .logo {
 header .logo img {
   -o-object-fit: contain;
      object-fit: contain;
-  max-width: 180px;
+  max-width: 161px;
+  width: 161px;
 }
 
 header.spinner {
@@ -378,31 +377,36 @@ header.spinner .logo {
   left: 0;
   height: 100%;
   z-index: 3;
-  -webkit-animation: fullScreen 4s linear;
-          animation: fullScreen 4s linear;
+  -webkit-animation: fullScreen 3s linear;
+          animation: fullScreen 3s linear;
 }
 
 header.spinner .logo div {
   position: relative;
+  -webkit-animation: image-grow 3s linear;
+          animation: image-grow 3s linear;
 }
 
 header.spinner .logo div::before,
 header.spinner .logo div::after {
   content: "";
   position: absolute;
-  border: 7px solid transparent;
+  border: 12px solid transparent;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
   border-radius: 50%;
   opacity: 0;
 }
 
 header.spinner .logo div::before {
-  top: -300%;
-  bottom: -300%;
-  left: -20%;
-  right: -20%;
+  top: -320%;
+  bottom: -320%;
+  left: -25%;
+  right: -25%;
   border-top-color: #9356DC;
-  -webkit-animation: rotateSpinner1 3500ms linear forwards;
-          animation: rotateSpinner1 3500ms linear forwards;
+  -webkit-animation: rotateSpinner1 2500ms linear forwards;
+          animation: rotateSpinner1 2500ms linear forwards;
 }
 
 header.spinner .logo div::after {
@@ -411,8 +415,8 @@ header.spinner .logo div::after {
   left: -14%;
   right: -14%;
   border-top-color: #FF79DA;
-  -webkit-animation: rotateSpinner2 3500ms linear forwards;
-          animation: rotateSpinner2 3500ms linear forwards;
+  -webkit-animation: rotateSpinner2 2500ms linear forwards;
+          animation: rotateSpinner2 2500ms linear forwards;
 }
 
 /* footer */

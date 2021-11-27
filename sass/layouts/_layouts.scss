@@ -7,6 +7,8 @@
     background: $background-light;
     @include mq(large){
             background-color: $tertiary-color;
+            background: url(../images/general/backgroundBlur.jpg) no-repeat;
+            background-size: cover;
     }
         section {
             @include mq(large){
@@ -36,7 +38,8 @@ header {
             flex-grow: 1;
             img {
                 object-fit: contain;
-                 max-width: 180px;
+                max-width: 161px;
+                width: 161px;
              }
         }
 }
@@ -52,26 +55,30 @@ header.spinner {
             left:0;
             height: 100%;
             z-index: 3;
-            animation: fullScreen 4s linear;
+            animation: fullScreen 3s linear;
         }
         .logo div {
             position: relative;
+            animation: image-grow 3s linear;
         }
         .logo div::before,
         .logo div::after {
             content:"";
             position: absolute;
-            border: 7px solid transparent;
+            border: 12px solid transparent;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
             border-radius: 50%; 
             opacity:0;
             }
         .logo div::before {
-            top: -300%;
-            bottom: -300%;
-            left: -20%;
-            right: -20%;
+            top: -320%;
+            bottom: -320%;
+            left: -25%;
+            right: -25%;
             border-top-color: $primary-color;
-            animation: rotateSpinner1 3500ms linear forwards;
+            animation: rotateSpinner1 2500ms linear forwards;
         }
         .logo div::after {
             top: -270%;
@@ -79,7 +86,7 @@ header.spinner {
             left: -14%;
             right: -14%;   
             border-top-color: $secondary-color;
-            animation: rotateSpinner2 3500ms linear forwards;
+            animation: rotateSpinner2 2500ms linear forwards;
         }
 }
 
