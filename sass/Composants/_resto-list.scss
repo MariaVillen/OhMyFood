@@ -2,6 +2,8 @@
 .restaurant-list {
     background-color: $background-light;
     padding: 2em 1em 3em 1em;
+    max-width: 1024px;
+    margin: auto;
     @include mq(medium){
         display: flex;
         flex-flow: row wrap;
@@ -20,7 +22,8 @@
     box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
     margin: 1em auto;
     @include mq(medium) {
-        width: 45%;
+        width: 44%;
+        margin: 3%;
     }
     &--new .restaurant-card__image::after{
         content:"Nouveau";

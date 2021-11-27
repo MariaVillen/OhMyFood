@@ -5,23 +5,6 @@
 
     &.home {
     background: $background-light;
-    @include mq(large){
-            background-color: $tertiary-color;
-            background: url(../images/general/backgroundBlur.jpg) no-repeat;
-            background-size: cover;
-    }
-    section {
-        @include mq(large){
-            max-width: 990px;
-            margin: auto;
-        }
-    }
-    .footer-container {
-        @include mq(large){
-           background: rgba(255,255,255,0.1);
-        }
-    }  
-
     }
 }
 
@@ -35,6 +18,9 @@ header {
     justify-content: center;
     align-items: center;
     background-color: white;
+        & > a {
+            font-size: 1.5em;
+        }
         .logo {
             width: 50%;
             height: 100%;
@@ -109,6 +95,12 @@ footer {
                 max-width: 990px;
                 margin: auto;
             }
+            .logo {
+                 @include mq(medium){
+                     text-align: center;
+                     margin-bottom: 2em;
+                 }
+            }
 
         }
         a:hover {
@@ -141,14 +133,48 @@ footer {
 /* Active button Layout */
 .presentation-card {
     text-align: center;
-    padding: 2em;
     background: $background-light;
+    @include mq(medium){
+        height: 49vh;
+        background: url(../images/general/backgroundBlur.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    @include mq(large){
+        height: 67vh;
+    }
+    & > div{
+        padding: 2em;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        @include mq(large){
+            background: rgba(0,0,0,0.3);
+        }
+    }
         h1 {
             margin: 1em 1em 0em 1em;
             font-weight: 900;
+            @include mq(medium){
+                color: white;
+            }
+            @include mq(large){
+                font-size: 3em;
+            }
         }
         p {
             color: $font-secondary;
+            @include mq(medium){
+                color: white;
+            }
+            @include mq(large){
+                font-size: 1.5em;
+            }
         }
 }
 
@@ -168,66 +194,75 @@ footer {
     background: $background-light;
     position:relative;
     top: -3em;
-        .active-button {
-            margin: 0 auto;
-            display: block;
-            padding: 1em 3em;
+    .active-button {
+        margin: 0 auto;
+        display: block;
+        padding: 1em 3em;
+    }
+    &__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1em;
+        @include mq(medium){
+            margin:0 auto;
+            max-width: 700px;
         }
-        &__title {
+        @include mq(large) {
+            justify-content: center;
+        }
+        h1 {
+            font-family: $font-title;
+        }
+        label {
+            margin: auto 1.5em;
+            font-size: 1.5em;
+        }
+    }
+    &__body {
+        @include mq(medium){
+            
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            margin-top: 1em;
-            @include mq(large) {
-                justify-content: center;
-            }
-            h1 {
-                font-family: $font-title;
-            }
-            label {
-                margin: auto 1.5em;
-                font-size: 1.5em;
-            }
+            margin-bottom: 2em;
         }
-        &__body {
-            @include mq(large){
-                display: flex;
-                justify-content: space-evenly;
-            }
+    }
+    &__body-section {
+        margin-bottom: 3em;
+        transform: translateY(2em);
+        opacity: 0;
+        width: 100%;
+        @include mq(medium){
+            margin: 1em auto;
+            width: 80%;
+            max-width: 500px;
         }
-        &__body-section {
-            margin-bottom: 3em;
-            transform: translateY(2em);
-            opacity: 0;
-            width: 100%;
-            @include mq(medium){
-                margin: 0 auto;
-                width: 80%;
-            }
-            @include mq(large){
-                margin: 1em;
-                width: 100%;
-            }
-            ul {
-                padding: 0;
-            }
-            h2 {
-                font-weight: 100;
-                text-transform: uppercase;
-                font-size: 1.2em;
-                margin: 1em auto;
-                position: relative;
-            }
-            h2::after {
-                content: "";
-                position: absolute;
-                border-bottom: 3px solid #99E2D0;
-                padding-right: 2.5em;
-                top: 1.4em;
-                left: 0;
-            }
+        @include mq(large){
+            margin: 1em;
+            width: 31%;
         }
+        ul {
+            padding: 0;
+        }
+        h2 {
+            font-weight: 100;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            margin: 1em auto;
+            position: relative;
+        }
+        h2::after {
+            content: "";
+            position: absolute;
+            border-bottom: 3px solid #99E2D0;
+            padding-right: 2.5em;
+            top: 1.4em;
+            left: 0;
+        }
+    }
 }
 
 
