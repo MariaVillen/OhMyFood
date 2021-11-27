@@ -93,15 +93,17 @@ header.spinner {
 /* footer */
 
 footer {
-    padding: 2em;
+    padding: 0;
     background: $background-black;
     text-align: left;
     
         .footer-container {
             @include mq(large){
                 max-width: 990px;
-                margin: auto;
+                margin: auto;     
+               background: rgba(255,255,255,0.1);
             }
+            padding: 2em;
         }
         a:hover {
             color: $tertiary-color;

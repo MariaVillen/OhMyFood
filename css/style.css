@@ -75,8 +75,8 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(1.5turn);
-            transform: rotate(1.5turn);
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
   }
   81% {
     -webkit-transform: scale(0);
@@ -99,8 +99,8 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(1.5turn);
-            transform: rotate(1.5turn);
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
   }
   81% {
     -webkit-transform: scale(0);
@@ -123,16 +123,14 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(2.5turn);
-            transform: rotate(2.5turn);
+    -webkit-transform: rotate(3.5turn);
+            transform: rotate(3.5turn);
   }
   81% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    /*transform: scale(0);*/
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    /*transform: scale(0);*/
   }
 }
 
@@ -147,16 +145,14 @@ Thèmes.*/
   }
   80% {
     opacity: 0;
-    -webkit-transform: rotate(2.5turn);
-            transform: rotate(2.5turn);
+    -webkit-transform: rotate(3.5turn);
+            transform: rotate(3.5turn);
   }
   81% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    /*transform: scale(0);*/
   }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    /*transform: scale(0);*/
   }
 }
 
@@ -421,15 +417,20 @@ header.spinner .logo div::after {
 
 /* footer */
 footer {
-  padding: 2em;
+  padding: 0;
   background: #353535;
   text-align: left;
+}
+
+footer .footer-container {
+  padding: 2em;
 }
 
 @media screen and (min-width: 1024px) {
   footer .footer-container {
     max-width: 990px;
     margin: auto;
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 

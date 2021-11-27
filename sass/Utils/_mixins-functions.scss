@@ -76,7 +76,7 @@
         opacity:1;}
     70%{opacity:1;}
     80% {opacity:0;
-        transform: rotate(1.5turn);}
+        transform: rotate(2turn);}
     81% {transform: scale(0);}
     100% {transform: scale(0);}
 }
@@ -86,9 +86,9 @@
         opacity:1;}
     70%{opacity:1;}
     80% {opacity:0;
-        transform: rotate(2.5turn);}
-    81% {transform: scale(0);}
-    100% {transform: scale(0);}
+        transform: rotate(3.5turn);}
+    81% {/*transform: scale(0);*/}
+    100% {/*transform: scale(0);*/}
 
 }
 
