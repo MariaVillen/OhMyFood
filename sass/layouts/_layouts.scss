@@ -10,12 +10,18 @@
             background: url(../images/general/backgroundBlur.jpg) no-repeat;
             background-size: cover;
     }
-        section {
-            @include mq(large){
-                max-width: 990px;
-                margin: auto;
-            }
-        }  
+    section {
+        @include mq(large){
+            max-width: 990px;
+            margin: auto;
+        }
+    }
+    .footer-container {
+        @include mq(large){
+           background: rgba(255,255,255,0.1);
+        }
+    }  
+
     }
 }
 
@@ -98,12 +104,12 @@ footer {
     text-align: left;
     
         .footer-container {
+            padding: 2em;
             @include mq(large){
                 max-width: 990px;
-                margin: auto;     
-               background: rgba(255,255,255,0.1);
+                margin: auto;
             }
-            padding: 2em;
+
         }
         a:hover {
             color: $tertiary-color;
@@ -150,6 +156,9 @@ footer {
 
 .thumbnail img {
     max-height: 265px;
+    @include mq(large){
+        max-height: 55vh;
+    }
 }
 
 /* Restaurants menu layout */

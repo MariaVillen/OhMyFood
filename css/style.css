@@ -315,6 +315,12 @@ input.like-fill-icon:checked + label.like-fill-icon > i::after {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .container.home .footer-container {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
 /* Header */
 header {
   padding: 1em;
@@ -430,7 +436,6 @@ footer .footer-container {
   footer .footer-container {
     max-width: 990px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -493,6 +498,12 @@ footer nav i {
 /* Images on restaurants menus */
 .thumbnail img {
   max-height: 265px;
+}
+
+@media screen and (min-width: 1024px) {
+  .thumbnail img {
+    max-height: 55vh;
+  }
 }
 
 /* Restaurants menu layout */
