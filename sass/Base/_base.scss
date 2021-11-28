@@ -27,5 +27,16 @@ a:active {
 }
 li {list-style: none;}
 
-
+button::selection,
+a::selection,
+img::selection
+{ 
+    background: transparent; 
+} 
+button::-moz-selection, 
+a::selection,
+img::selection 
+{ 
+    background: transparent; 
+}
 
