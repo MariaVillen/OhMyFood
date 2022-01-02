@@ -1,3 +1,4 @@
+/* General Styles */
 
 * {
     box-sizing: border-box;
@@ -27,6 +28,7 @@ a:active {
 }
 li {list-style: none;}
 
+/* Do not see the color select text form buttons */
 button::selection,
 a::selection,
 img::selection

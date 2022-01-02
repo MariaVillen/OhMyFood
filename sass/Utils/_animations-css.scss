@@ -1,0 +1,59 @@
+
+/* SPINNER ANIMATION */
+
+/* Change Logo Size for Spinner animation */
+@keyframes image-grow {
+    0%, 81%{transform: scale(0.5);}
+    100%{transform: scale(1)}
+}
+
+/* Pink Spinner arc rotation*/
+@keyframes rotateSpinner1 {
+    0% {transform: rotate(0deg);
+        opacity:1;}
+    70%{opacity:1;}
+    80% {opacity:0;
+        transform: rotate(2turn);}
+    81% {transform: scale(0);}
+    100% {transform: scale(0);}
+}
+
+/* Violet Spinner arc rotation */
+@keyframes rotateSpinner2 {
+    0% {transform: rotate(0deg);
+        opacity:1;}
+    70%{opacity:1;}
+    80% {opacity:0;
+        transform: rotate(3.5turn);}
+    81% {transform: scale(0);}
+    100% {transform: scale(0);}
+
+}
+
+/* Change screen to 100vh and don't let scroll the page */
+@keyframes fullScreen {
+    0%, 80% {
+        min-height: 100vh;
+        position:fixed;
+    }
+    81% {position: absolute;}
+    100% {
+        position: absolute;
+        min-height: 0px;
+    }
+}
+
+
+/* RESTAURANT ANIMATION MENU ITEM INTRO */
+
+@keyframes introfade {
+    0% {
+        opacity: 0;
+        transform: translateY(2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

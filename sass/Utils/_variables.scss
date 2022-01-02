@@ -1,12 +1,14 @@
 
-/* fonts */
+/* Fonts */
+
 $font-title: "Shrikhand";
 $font-text: "Roboto";
 $font-size: 16px;
 $font-primary: black;
 $font-secondary: #575757;
 
-/*colors*/
+/* Colors */
+
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -15,9 +17,9 @@ $background-dark: #EAEAEA;
 $background-black: #353535;
 
 /* Breakpoints */
+
 $breakpoints: (
   small : 480px,
   medium: 768px,
   large : 1024px
 );
-

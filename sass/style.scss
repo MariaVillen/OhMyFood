@@ -1,15 +1,11 @@
-/* Utils.(Variables.Fonctions.Mixins.Placeholders)
-Feuilles de style de tiers (vendors) (si vous en avez).
-Base.
-Composants.
-Layout.
-Pages.
-Thèmes.*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 @import "./Utils/variables";
 @import "./Utils/mixins-functions";
+@import "./Utils/animations-css";
 @import "./Base/base";
-@import "./Composants/little-components";
+@import "./Composants/button-component";
+@import "./Composants/like-heart-component";
 @import "./layouts/layouts";
 @import "./Composants/geo-form";
 @import "./Composants/instruction-guide";

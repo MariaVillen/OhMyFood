@@ -1,37 +1,20 @@
-/* button gradient and lighten hover */
+/* Like Button Heart */
 
-.active-button {
-    padding: 1em;
-    border-radius: 2em;
-    background: linear-gradient(350deg, $primary-color, $secondary-color 90%);
-    color: white;
-    border: none;
-    margin: 1em;
-    @include box--shadow("light");
-    transition: all 300ms ease-in-out;
-
-        @include mq(large){
-            font-size: 1.5em;
-        }
-        &:hover {
-            @include box--shadow("dark");
-            filter: brightness(1.1);    
-        }
-}
-
-/* icon fill gradient */
 label.like-fill-icon {
     padding: 0.5em;
     display: inline-block;
     align-self: center;
+
     &:hover i {
         color: $secondary-color;
     }
+
     i{
         font-weight: 400;
         color:rgb(126, 126, 126);
         position: relative;    
     }
+
     & > i::after {
         content:"\f004";
         position: absolute;
@@ -40,8 +23,8 @@ label.like-fill-icon {
         background-image: linear-gradient(330deg, $primary-color, $secondary-color 75%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        background-clip: text; /* apply background only to text */
+        -webkit-text-fill-color: transparent;  /*transparent color only on text - Allow to see background */
         -moz-text-fill-color: transparent;
         font-weight: 900;
         transform: scale(0);
@@ -49,11 +32,15 @@ label.like-fill-icon {
         transition: transform 300ms ease-in;
     }
 }
+
 input.like-fill-icon:checked + label.like-fill-icon {
+
     & > i {
     color: $secondary-color;
     }
+
     & > i::after{
     transform: scale(1);
     }
+
 }

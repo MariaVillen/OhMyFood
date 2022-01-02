@@ -1,14 +1,6 @@
-@charset "UTF-8";
-/* Utils.(Variables.Fonctions.Mixins.Placeholders)
-Feuilles de style de tiers (vendors) (si vous en avez).
-Base.
-Composants.
-Layout.
-Pages.
-Thèmes.*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-/* fonts */
-/*colors*/
+/* Fonts */
+/* Colors */
 /* Breakpoints */
 /***** FUNCTIONS ******/
 /* Return pastel color from a given HEX value color*/
@@ -16,7 +8,154 @@ Thèmes.*/
 /* To give border-radius the 2 corners on 1 side */
 /* box shadow styles */
 /* Break Points - The $breakpoints must be declared */
-/********* ANIMATIONS - KEYFRAMES ********/
+/* SPINNER ANIMATION */
+/* Change Logo Size for Spinner animation */
+@-webkit-keyframes image-grow {
+  0%, 81% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes image-grow {
+  0%, 81% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Pink Spinner arc rotation*/
+@-webkit-keyframes rotateSpinner1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes rotateSpinner1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+/* Violet Spinner arc rotation */
+@-webkit-keyframes rotateSpinner2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: rotate(3.5turn);
+            transform: rotate(3.5turn);
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes rotateSpinner2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: rotate(3.5turn);
+            transform: rotate(3.5turn);
+  }
+  81% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+/* Change screen to 100vh and don't let scroll the page */
+@-webkit-keyframes fullScreen {
+  0%, 80% {
+    min-height: 100vh;
+    position: fixed;
+  }
+  81% {
+    position: absolute;
+  }
+  100% {
+    position: absolute;
+    min-height: 0px;
+  }
+}
+@keyframes fullScreen {
+  0%, 80% {
+    min-height: 100vh;
+    position: fixed;
+  }
+  81% {
+    position: absolute;
+  }
+  100% {
+    position: absolute;
+    min-height: 0px;
+  }
+}
+
+/* RESTAURANT ANIMATION MENU ITEM INTRO */
 @-webkit-keyframes introfade {
   0% {
     opacity: 0;
@@ -42,152 +181,7 @@ Thèmes.*/
   }
 }
 
-@-webkit-keyframes image-grow {
-  0%, 81% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes image-grow {
-  0%, 81% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes rotateSpinner1 {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-    -webkit-transform: rotate(2turn);
-            transform: rotate(2turn);
-  }
-  81% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@keyframes rotateSpinner1 {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-    -webkit-transform: rotate(2turn);
-            transform: rotate(2turn);
-  }
-  81% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@-webkit-keyframes rotateSpinner2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-    -webkit-transform: rotate(3.5turn);
-            transform: rotate(3.5turn);
-  }
-  81% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@keyframes rotateSpinner2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-    -webkit-transform: rotate(3.5turn);
-            transform: rotate(3.5turn);
-  }
-  81% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@-webkit-keyframes fullScreen {
-  0%, 80% {
-    min-height: 100vh;
-    position: fixed;
-  }
-  81% {
-    position: absolute;
-  }
-  100% {
-    position: absolute;
-    min-height: 0px;
-  }
-}
-
-@keyframes fullScreen {
-  0%, 80% {
-    min-height: 100vh;
-    position: fixed;
-  }
-  81% {
-    position: absolute;
-  }
-  100% {
-    position: absolute;
-    min-height: 0px;
-  }
-}
-
+/* General Styles */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -225,12 +219,12 @@ li {
   list-style: none;
 }
 
+/* Do not see the color select text form buttons */
 button::-moz-selection,
 a::-moz-selection,
 img::-moz-selection {
   background: transparent;
 }
-
 button::selection,
 a::selection,
 img::selection {
@@ -249,7 +243,7 @@ img::selection {
   background: transparent;
 }
 
-/* button gradient and lighten hover */
+/* Button Styles Gradient and Hover Lighten */
 .active-button {
   padding: 1em;
   border-radius: 2em;
@@ -276,7 +270,7 @@ img::selection {
           filter: brightness(1.1);
 }
 
-/* icon fill gradient */
+/* Like Button Heart */
 label.like-fill-icon {
   padding: 0.5em;
   display: inline-block;
@@ -303,7 +297,9 @@ label.like-fill-icon > i::after {
   background-image: linear-gradient(330deg, #9356DC, #FF79DA 75%);
   -webkit-background-clip: text;
   background-clip: text;
+  /* apply background only to text */
   -webkit-text-fill-color: transparent;
+  /*transparent color only on text - Allow to see background */
   -moz-text-fill-color: transparent;
   font-weight: 900;
   -webkit-transform: scale(0);
@@ -381,6 +377,7 @@ header .logo img {
   width: 161px;
 }
 
+/* Header Animation Spinner */
 header.spinner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,7 +500,7 @@ footer nav i {
   width: 1em;
 }
 
-/* Active button Layout */
+/* Introduction Call-to-action Layout */
 .presentation-card {
   text-align: center;
   background: #f6f6f6;
@@ -584,7 +581,8 @@ footer nav i {
   }
 }
 
-/* Images on restaurants menus */
+/* Restaurant Menu Page Layout */
+/* Image of restaurant */
 .thumbnail img {
   max-height: 265px;
 }
@@ -595,7 +593,7 @@ footer nav i {
   }
 }
 
-/* Restaurants menu layout */
+/* Restaurant menu layout */
 .menu {
   padding: 1em;
   border-top-left-radius: 3em;
@@ -713,7 +711,7 @@ footer nav i {
   left: 0;
 }
 
-/* Automatization of Css from menu restaurant layout */
+/* Add animation to menu restaurant layout (entrees, plats and desserts)*/
 .menu__body-section:nth-child(1) {
   -webkit-animation: introfade 700ms ease-out forwards;
           animation: introfade 700ms ease-out forwards;
@@ -754,6 +752,7 @@ footer nav i {
           animation: introfade 1600ms ease-out forwards;
 }
 
+/* Form to add localisation function */
 .geo-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -787,6 +786,7 @@ footer nav i {
   outline: none;
 }
 
+/* Instruction Component */
 .guide-card {
   padding: 1em;
   margin: 1em auto;
@@ -903,6 +903,7 @@ footer nav i {
   color: #9356DC;
 }
 
+/* Restaurant List Element */
 .restaurant-list {
   background-color: #f6f6f6;
   padding: 2em 1em 3em 1em;
@@ -931,6 +932,7 @@ footer nav i {
   }
 }
 
+/* Restaurant Card Element */
 .restaurant-card {
   background: #fff;
   border-radius: 1em;
@@ -1002,6 +1004,7 @@ footer nav i {
   margin: 0.25em auto;
 }
 
+/* Menu Items Buttons */
 .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1021,6 +1024,7 @@ footer nav i {
   margin: 1.5em auto;
   background: white;
   max-width: 500px;
+  /* Show check icon */
   -webkit-transform: translateY(4em);
           transform: translateY(4em);
 }
@@ -1095,6 +1099,7 @@ footer nav i {
 .menu-item:hover .menu-item__button i {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
+  /* rotate check icon */
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
@@ -1103,5 +1108,6 @@ footer nav i {
 
 .menu-item:hover .menu-item__button div {
   max-width: 150px;
+  /* hide check icon */
 }
 /*# sourceMappingURL=style.css.map */

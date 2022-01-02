@@ -1,3 +1,5 @@
+/* Form to add localisation function */
+
 .geo-form {
     display: flex;
     flex-flow: row nowrap;
@@ -5,6 +7,7 @@
     align-items: center;
     padding: 0.5em;
     background: $background-dark;
+
         input {
             padding: 1em;
             border: none;
@@ -14,6 +17,7 @@
             border: 2px solid transparent;
             z-index: 999;
         }
+
         input:focus-visible, input:focus, input:hover {
             border-bottom: 2px solid $tertiary-color;
             outline: none;

@@ -1,6 +1,7 @@
 /***** FUNCTIONS ******/
 
 /* Return pastel color from a given HEX value color*/
+
 @function pastel($clr)
 {
     $hue: hue($clr);
@@ -13,6 +14,7 @@
 /***** MIXINS *******/
 
 /* To give border-radius the 2 corners on 1 side */
+
 @mixin side-border-radius($side, $msr) {
     @if($side == "right") {
         border-top-right-radius: $msr;
@@ -30,6 +32,7 @@
 }
 
 /* box shadow styles */
+
 @mixin box--shadow($style) {
     @if ($style=="light") {
     box-shadow: 3px 6px 8px 0px rgba(0, 0, 0,0.15);
@@ -53,53 +56,3 @@
     }
   }
   
-/********* ANIMATIONS - KEYFRAMES ********/
-
-@keyframes introfade {
-    0% {
-        opacity: 0;
-        transform: translateY(2em);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes image-grow {
-    0%, 81%{transform: scale(0.5);}
-    100%{transform: scale(1)}
-}
-
-@keyframes rotateSpinner1 {
-    0% {transform: rotate(0deg);
-        opacity:1;}
-    70%{opacity:1;}
-    80% {opacity:0;
-        transform: rotate(2turn);}
-    81% {transform: scale(0);}
-    100% {transform: scale(0);}
-}
-
-@keyframes rotateSpinner2 {
-    0% {transform: rotate(0deg);
-        opacity:1;}
-    70%{opacity:1;}
-    80% {opacity:0;
-        transform: rotate(3.5turn);}
-    81% {transform: scale(0);}
-    100% {transform: scale(0);}
-
-}
-
-@keyframes fullScreen {
-    0%, 80% {
-        min-height: 100vh;
-        position:fixed;
-    }
-    81% {position: absolute;}
-    100% {
-        position: absolute;
-        min-height: 0px;
-    }
-}
