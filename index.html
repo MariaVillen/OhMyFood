@@ -47,250 +47,254 @@
 
       </header>
 
-      <!-- Section -->
 
-      <section>
+      <!-- Main -->
+      <main>
 
-        <!-- Localisation -->
+        <section>
 
-        <div class="geo-form">
+          <!-- Localisation -->
 
-          <i class="fas fa-map-marker-alt"></i>
+          <div class="geo-form">
 
-          <form>
-            <input
-              type="text"
-              size="10"
-              value="Paris, Belleville"
-              name="place"
-            />
-          </form>
+            <i class="fas fa-map-marker-alt"></i>
 
-        </div>
-
-        <!-- Introduction -->
-
-        <div class="presentation-card">
-
-          <div>
-
-            <h1>Réservez le menu qui vous convient</h1>
-            <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <a href="#restaurants" class="active-button">Explorer nos restaurants</a>
+            <form>
+              <input
+                type="text"
+                size="10"
+                value="Paris, Belleville"
+                name="place"
+              />
+            </form>
 
           </div>
 
-        </div>
+          <!-- Introduction -->
 
-        <!-- Instructions -->
+          <div class="presentation-card">
+
+            <div>
+
+              <h1>Réservez le menu qui vous convient</h1>
+              <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+              <a href="#restaurants" class="active-button">Explorer nos restaurants</a>
+
+            </div>
+
+          </div>
+
+          <!-- Instructions -->
+          
+          <div class="guide-card">
+
+            <h2>Fonctionnement</h2>
+            
+            <ul>
+
+              <!-- Instruction 1 -->
+              <li class="guide-card__instruction">
+              
+                <span>1</span>
+              
+                <div>
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Chossisez un restaurant</span>
+                </div>
+              
+              </li>
+              
+              <!-- Instruction 2 -->
+              <li class="guide-card__instruction">
+                
+                <span>2</span>
+                
+                <div>
+                  <i class="fas fa-list-ul"></i>
+                  <span>Composez votre menu</span>
+                </div>
+              
+              </li>
+
+              <!-- Instruction 3 -->
+              <li class="guide-card__instruction active">
+
+                <span>3</span>
+                
+                <div>
+                  <i class="fas fa-store"></i>
+                  <span>Dégustez au restaurant</span>
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <!-- Restaurant List -->
+
+          <div id="restaurants" class="restaurant-list">
+
+            <h2>Restaurants</h2>
+            
+            
+            <!-- Card restaurant -->
         
-        <div class="guide-card">
-
-          <h2>Fonctionnement</h2>
-          
-          <ul>
-
-            <!-- Instruction 1 -->
-            <li class="guide-card__instruction">
+            <div class="restaurant-card restaurant-card--new">
             
-              <span>1</span>
-            
-              <div>
-                <i class="fas fa-mobile-alt"></i>
-                <span>Chossisez un restaurant</span>
-              </div>
-            
-            </li>
-            
-            <!-- Instruction 2 -->
-            <li class="guide-card__instruction">
-              
-              <span>2</span>
-              
-              <div>
-                <i class="fas fa-list-ul"></i>
-                <span>Composez votre menu</span>
-              </div>
-            
-            </li>
-
-            <!-- Instruction 3 -->
-            <li class="guide-card__instruction active">
-
-              <span>3</span>
-              
-              <div>
-                <i class="fas fa-store"></i>
-                <span>Dégustez au restaurant</span>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </div>
-
-        <!-- Restaurant List -->
-
-        <div id="restaurants" class="restaurant-list">
-
-          <h2>Restaurants</h2>
-          
-          
-          <!-- Card restaurant -->
-      
-          <div class="restaurant-card restaurant-card--new">
-          
-            <!-- Card Image -->
-            <a href="la-palette-du-gout.html">
-          
-              <div class="restaurant-card__image">
-                <img
-                  srcset="images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash__400w.jpg 400w,
-                  images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash__900w.jpg 900w"
-                  sizes="(max-width: 767px) 750px, 450px"
-                  src="images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash__900w.jpg"
-                  alt="La palette du goût"
-                />
-              </div>
-          
-            </a>
-
-            <!-- Card Description -->
-            <div class="restaurant-card__description">
-          
+              <!-- Card Image -->
               <a href="la-palette-du-gout.html">
-                <h3>La palette du goût</h3>
-                <p>Ménilmontant</p>
+            
+                <div class="restaurant-card__image">
+                  <img
+                    srcset="images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash__400w.jpg 400w,
+                    images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash__900w.jpg 900w"
+                    sizes="(max-width: 767px) 750px, 450px"
+                    src="images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash__900w.jpg"
+                    alt="La palette du goût"
+                  />
+                </div>
+            
               </a>
 
-              <!-- Like Button -->
-              <input class="like-fill-icon" type="checkbox" id="hc1" hidden />            
-              <label class="like-fill-icon" for="hc1">
-                <i class="far fa-heart like-fill-icon"></i>
-              </label>
+              <!-- Card Description -->
+              <div class="restaurant-card__description">
+            
+                <a href="la-palette-du-gout.html">
+                  <h3>La palette du goût</h3>
+                  <p>Ménilmontant</p>
+                </a>
+
+                <!-- Like Button -->
+                <input class="like-fill-icon" type="checkbox" id="hc1" hidden />            
+                <label class="like-fill-icon" for="hc1">
+                  <i class="far fa-heart like-fill-icon"></i>
+                </label>
+
+              </div>
 
             </div>
 
-          </div>
+            
+            <!-- Card restaurant -->
+        
+            <div class="restaurant-card restaurant-card--new">
 
-          
-          <!-- Card restaurant -->
-      
-          <div class="restaurant-card restaurant-card--new">
-
-            <!-- Card Image -->
-            <a href="la-note-enchantee.html">
-
-              <div class="restaurant-card__image">
-                <img
-                  srcset="images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash__400w.jpg 400w,
-                  images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash__900w.jpg 900w"
-                  sizes="(max-width: 767px) 750px, 450px"
-                  src="images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash__900w.jpg"
-                  alt="La note enchantée"
-                />
-              </div>
-
-            </a>
-
-            <!-- Card Description -->
-            <div class="restaurant-card__description">
-
+              <!-- Card Image -->
               <a href="la-note-enchantee.html">
-                <h3>La note enchantée</h3>
-                <p>Charonne</p>
+
+                <div class="restaurant-card__image">
+                  <img
+                    srcset="images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash__400w.jpg 400w,
+                    images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash__900w.jpg 900w"
+                    sizes="(max-width: 767px) 750px, 450px"
+                    src="images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash__900w.jpg"
+                    alt="La note enchantée"
+                  />
+                </div>
+
               </a>
 
-              <!-- Card Button -->
-              <input class="like-fill-icon" type="checkbox" id="hc2" hidden />
-              <label class="like-fill-icon" for="hc2">
-                <i class="far fa-heart like-fill-icon"></i>
-              </label>
+              <!-- Card Description -->
+              <div class="restaurant-card__description">
+
+                <a href="la-note-enchantee.html">
+                  <h3>La note enchantée</h3>
+                  <p>Charonne</p>
+                </a>
+
+                <!-- Card Button -->
+                <input class="like-fill-icon" type="checkbox" id="hc2" hidden />
+                <label class="like-fill-icon" for="hc2">
+                  <i class="far fa-heart like-fill-icon"></i>
+                </label>
+
+              </div>
 
             </div>
 
-          </div>
 
+            <!-- Card restaurant -->
+        
+            <div class="restaurant-card">
 
-          <!-- Card restaurant -->
-      
-          <div class="restaurant-card">
-
-            <!-- Card Image -->
-            <a href="a-la-francaise.html">
-            
-              <div class="restaurant-card__image">
-                <img
-                  srcset="images/restaurant/stil-u2Lp8tXIcjw-unsplash__400w.jpg 400w,
-                          images/restaurant/stil-u2Lp8tXIcjw-unsplash__900w.jpg 900w"
-                  sizes="(max-width: 767px) 750px, 450px"
-                  src="images/restaurant/stil-u2Lp8tXIcjw-unsplash__900w.jpg"
-                  alt="À la française"
-                />
-              </div>
-            
-            </a>
-            
-            <!-- Card Description -->
-            <div class="restaurant-card__description">
-            
+              <!-- Card Image -->
               <a href="a-la-francaise.html">
-                <h3>À la française</h3>
-                <p>Cité Rouge</p>
+              
+                <div class="restaurant-card__image">
+                  <img
+                    srcset="images/restaurant/stil-u2Lp8tXIcjw-unsplash__400w.jpg 400w,
+                            images/restaurant/stil-u2Lp8tXIcjw-unsplash__900w.jpg 900w"
+                    sizes="(max-width: 767px) 750px, 450px"
+                    src="images/restaurant/stil-u2Lp8tXIcjw-unsplash__900w.jpg"
+                    alt="À la française"
+                  />
+                </div>
+              
               </a>
-            
-              <!-- Card Button -->
-              <input class="like-fill-icon" type="checkbox" id="hc3" hidden />
-              <label class="like-fill-icon" for="hc3">
-                <i class="far fa-heart like-fill-icon"></i>
-              </label>
+              
+              <!-- Card Description -->
+              <div class="restaurant-card__description">
+              
+                <a href="a-la-francaise.html">
+                  <h3>À la française</h3>
+                  <p>Cité Rouge</p>
+                </a>
+              
+                <!-- Card Button -->
+                <input class="like-fill-icon" type="checkbox" id="hc3" hidden />
+                <label class="like-fill-icon" for="hc3">
+                  <i class="far fa-heart like-fill-icon"></i>
+                </label>
 
-            </div>
-
-          </div>
-
-
-          <!-- Card restaurant -->
-      
-          <div class="restaurant-card">
-
-            <!-- Card Image -->
-            <a href="le-delice-des-sens.html">
-
-              <div class="restaurant-card__image">
-                <img
-                  srcset="images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash__400w.jpg 400w,
-                  images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash__900w.jpg 900w"
-                  sizes="(max-width: 767px) 750px, 450px"
-                  src="images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash__900w.jpg"
-                  alt="Le délice des sens"
-                />
               </div>
 
-            </a>
+            </div>
 
-            <!-- Card descritpion -->
-            <div class="restaurant-card__description">
 
+            <!-- Card restaurant -->
+        
+            <div class="restaurant-card">
+
+              <!-- Card Image -->
               <a href="le-delice-des-sens.html">
-                <h3>Le délice des sens</h3>
-                <p>Folie-Méricourt</p>
+
+                <div class="restaurant-card__image">
+                  <img
+                    srcset="images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash__400w.jpg 400w,
+                    images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash__900w.jpg 900w"
+                    sizes="(max-width: 767px) 750px, 450px"
+                    src="images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash__900w.jpg"
+                    alt="Le délice des sens"
+                  />
+                </div>
+
               </a>
 
-              <!-- Like Button -->
-              <input class="like-fill-icon" type="checkbox" id="hc4" hidden />
-              <label class="like-fill-icon" for="hc4">
-                <i class="far fa-heart like-fill-icon"></i>
-              </label>
+              <!-- Card descritpion -->
+              <div class="restaurant-card__description">
+
+                <a href="le-delice-des-sens.html">
+                  <h3>Le délice des sens</h3>
+                  <p>Folie-Méricourt</p>
+                </a>
+
+                <!-- Like Button -->
+                <input class="like-fill-icon" type="checkbox" id="hc4" hidden />
+                <label class="like-fill-icon" for="hc4">
+                  <i class="far fa-heart like-fill-icon"></i>
+                </label>
+
+              </div>
 
             </div>
 
           </div>
 
-        </div>
-
-      </section>
+        </section>
+        
+      </main>
       
 
       <!-- Footer -->
